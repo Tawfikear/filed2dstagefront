@@ -1,6 +1,6 @@
-<form method="post" >
+<form [formGroup]="formulaire" method="post" enctype="form-data">
   <div>
-    <input type="email" id="email" />
+    <input type="number" id="email" />
   </div>
 
   <div>
@@ -15,4 +15,14 @@
   <div>
     <input type="file" id="file" />
   </div>
+  <div>
+    <button type="submit">Envoyer</button>
+</div>
 </form>
+
+
+
+
+
+
+
