@@ -19,14 +19,14 @@ export class AppComponent {
 
   })
 
-// dans cette on stocke l'ensemble des fihciers à uploader
+
 fichierTeleverser: File[] = [];
 
-// Définir une méthode pour récupérer les fichiers selctionnés
+
 onFilesSelected(event: any) {
   const files = event.target.files;
   for(const file of files) {
-    this.fichierTeleverser.push(file) // Ajoute le ficher au tableau des fichiers à uploader
+    this.fichierTeleverser.push(file) 
   }
 }
 
