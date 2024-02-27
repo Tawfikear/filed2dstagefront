@@ -1,11 +1,11 @@
 
 <form [formGroup]="formulaire" method="post" enctype="multipart/form-data" (submit)="onSubmit()">
   <div>
-    <input type="email" id="email" class="form-control" formControlName="email" />
+    <input type="email" formControlName="email"/>
   </div>
 
   <div>
-    <select id="expiration" formControlName="expiration">
+    <select formControlName="expiration">
       <option value="1j">1 jours</option>
       <option value="1m">1 mois</option>
       <option value="1y">1 an</option>
@@ -14,7 +14,7 @@
   </div>
 
   <div>
-    <input type="file" id="file" multiple (change)="onFilesSelected($event)" />
+    <input type="file" multiple (change)="onFilesSelected($event)" />
   </div>
   <div>
     <button type="submit">Envoyer</button>

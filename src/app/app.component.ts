@@ -26,11 +26,10 @@ fichierTeleverser: File[] = [];
 onFilesSelected(event: any) {
   const files = event.target.files;
   for(const file of files) {
-    this.fichierTeleverser.push(file) 
+    this.fichierTeleverser.push(file)
   }
 }
 
-// Définier une méthode qui va soumetre toutes les données du formulaire
 onSubmit() {
   console.log(this.formulaire.value);
   }
