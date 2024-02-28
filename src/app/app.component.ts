@@ -31,7 +31,12 @@ onFilesSelected(event: any) {
 }
 
 onSubmit() {
-  console.log(this.formulaire.value);
+  const formData = new FormData();
+    formData.append('email', this.formulaire.get('email').value)
+    formData.append('expiration', this.formulaire.get('expiration').value)
+    for (const fichier of this.fichierTeleverser) {
+      formData.append('files', fichier, fichier.name)
+    }
   }
 
 }
